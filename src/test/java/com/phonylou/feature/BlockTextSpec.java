@@ -30,4 +30,12 @@ class BlockTextSpec {
                 </html>""";
         System.out.println(text);
     }
+
+    @Test
+    void return_formatted_SQL_with_block_text() {
+        String text = """
+                SELECT * from Person
+                WHERE id = 'id' and name = 'aouyang tiechui'""";
+        System.out.println(text);
+    }
 }
