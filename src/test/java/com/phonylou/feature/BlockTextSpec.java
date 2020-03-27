@@ -38,4 +38,12 @@ class BlockTextSpec {
                 WHERE id = 'id' and name = 'aouyang tiechui'""";
         System.out.println(text);
     }
+
+    @Test
+    void try_variable_inside_text_block() {
+
+        System.out.println("""
+                $tiechui.name() + "'s hash code is " + tiechui.hashCode()
+                """.replace("$tiechui", "铁锤"));
+    }
 }
