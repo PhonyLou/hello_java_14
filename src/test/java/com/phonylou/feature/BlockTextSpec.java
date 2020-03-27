@@ -18,4 +18,16 @@ class BlockTextSpec {
                 I'm the second line""";
         System.out.println(text);
     }
+
+    @Test
+    void indentation_with_block_text() {
+        String text = """
+                <html>
+                    <body>
+                        <h1>Hello</h1>
+                        <h4>World</h4>
+                    </body>
+                </html>""";
+        System.out.println(text);
+    }
 }
