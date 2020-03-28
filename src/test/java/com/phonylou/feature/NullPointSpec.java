@@ -5,10 +5,7 @@ import org.junit.jupiter.api.Test;
 public class NullPointSpec {
     @Test
     void null_point_exception_with_tips() {
-        Action action = new Action();
         Animal animal = new Animal();
-        animal.action = action;
-
         animal.getAction().getOperation().run();
     }
 }

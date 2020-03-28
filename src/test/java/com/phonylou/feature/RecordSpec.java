@@ -20,11 +20,11 @@ class RecordSpec {
         Person tiechui = new Person("tiechui", 22);
         Person realTiechui = new Person("tiechui", 22);
 
-        System.out.println(tiechui == realTiechui);
-        System.out.println(tiechui.equals(realTiechui));
+        System.out.println("tiechui == realTiechui is " + (tiechui == realTiechui));
+        System.out.println("tiechui.equals(realTiechui) is " + (tiechui.equals(realTiechui)));
 
-        System.out.println(tiechui.name() + "'s hash code is " + tiechui.hashCode());
-        System.out.println(realTiechui.name() + "'s hash code is " + realTiechui.hashCode());
+        System.out.println("tiechui's hash code is " + tiechui.hashCode());
+        System.out.println("realTiechui's hash code is " + realTiechui.hashCode());
     }
 
 }
