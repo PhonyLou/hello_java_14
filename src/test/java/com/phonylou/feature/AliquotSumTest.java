@@ -18,6 +18,18 @@ public class AliquotSumTest {
         Assertions.assertEquals(factorNumbers, factorOf(realNumber).boxed().collect(Collectors.toList()));
     }
 
+    @Test
+    void should_return_aliquot_numbers_sum_given_a_real_number() {
+        var realNumber = 6;
+        var expectedAliquotNumberSum = 6;
+
+        Assertions.assertEquals(expectedAliquotNumberSum, aliquotNumberSum(realNumber));
+    }
+
+    public static int aliquotNumberSum(int realNumber) {
+        return factorOf(realNumber).sum() - realNumber;
+    }
+
     public static IntStream factorOf(int number) {
         return range(1, 1 + number).filter(n -> number % n == 0);
     }
