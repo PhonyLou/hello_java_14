@@ -26,6 +26,16 @@ public class AliquotSumTest {
         Assertions.assertEquals(expectedAliquotNumberSum, aliquotNumberSum(realNumber));
     }
 
+    @Test
+    void should_return_true_given_real_number_is_perfect_number() {
+        var realNumber = 6;
+        Assertions.assertTrue(isPerfect(realNumber));
+    }
+
+    public static boolean isPerfect(int realNumber) {
+        return aliquotNumberSum(realNumber) == realNumber;
+    }
+
     public static int aliquotNumberSum(int realNumber) {
         return factorOf(realNumber).sum() - realNumber;
     }
